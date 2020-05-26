@@ -30,8 +30,9 @@ export function authUser(type, userData) {
                     resolve();
                 })
                 .catch(error => {
-                    dispatch(addError(error.message));
-                    reject();
+                    // dispatch(addError(error.message));
+                    console.log(error);
+                    reject(error);
                 });
         });
     }
